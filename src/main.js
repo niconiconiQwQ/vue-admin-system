@@ -36,6 +36,9 @@ Vue.use(ElementUI, { locale });
 Vue.config.productionTip = false;
 import API from "@/api";
 Vue.prototype.$API = API;
+// 注册全局组件
+import CategorySelect from "@/components/CategorySelect/index.vue";
+Vue.component(CategorySelect.name, CategorySelect);
 new Vue({
   el: "#app",
   router,
